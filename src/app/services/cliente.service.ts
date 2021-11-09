@@ -65,4 +65,17 @@ export class ClienteService {
     let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
     return this._http.put(this.url + 'actualizar_perfil_cliente_guest/' + id, data, { headers: headers });
   }
+
+  obtener_config_publico(): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this._http.get(this.url + 'obtener_config_publico', { headers: headers });
+  }
+
+  // productos
+
+  // listar_productos_publico/:filtro?
+  listar_productos_publico(filtro: any): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this._http.get(this.url + 'listar_productos_publico/' + filtro, { headers: headers });
+  }
 }

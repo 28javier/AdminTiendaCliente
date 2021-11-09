@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
   public id: any;
   public user: any = undefined;
   public user_lc: any = undefined;
+  public config_Global: any = {};
 
 
   constructor(private _clienteService: ClienteService, private _router: Router) {
@@ -42,11 +43,25 @@ export class NavComponent implements OnInit {
       );
     }
 
+    this.configPublico();
   }
 
   ngOnInit(): void {
 
   }
+
+  configPublico() {
+    this._clienteService.obtener_config_publico().subscribe(
+      resp => {
+        // console.log(resp);
+        this.config_Global = resp.data;
+        // console.log(this.config_Global);
+      }, error => {
+        console.log(error);
+      }
+    );
+  }
+
 
   logaut() {
     window.location.reload(); // refresco de pagina
