@@ -106,7 +106,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Category -->
                         <div class="card border-bottom">
                             <div class="card-header pt-0 pb-3" id="category-panel">
@@ -160,7 +159,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Price -->
                         <div class="card border-bottom">
                             <div class="card-header py-3" id="price-panel">
@@ -202,13 +200,9 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-
-
             <!-- Product grid -->
             <div class="col">
                 <div class="row" *ngIf="load_data">
@@ -220,7 +214,6 @@
                 </div>
                 <div *ngIf="!load_data" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3"
                     data-filters-columns>
-
                     <!-- Item -->
                     <ng-container *ngIf="productos.length ==0">
                         <div class="col-lg-12 col-md-5 text-center">
@@ -235,7 +228,7 @@
                             *ngFor="let producto of productos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize;">
                             <div class="card card-product mx-auto">
                                 <div class="card-product-img">
-                                    <a href="shop-single.html" class="card-img-top">
+                                    <a [routerLink]="['/productos/', producto.slug]" class="card-img-top">
                                         <img [src]="url +'obtener_portada/'+ producto.portada" alt="Product image">
                                     </a>
                                     <div class="card-product-widgets-top">
@@ -254,7 +247,8 @@
                                 </div>
                                 <div class="card-body pb-2">
                                     <h3 class="card-product-title text-truncate mb-2">
-                                        <a href="shop-single.html" class="nav-link">{{producto.titulo}}</a>
+                                        <a [routerLink]="['/productos/', producto.slug]"
+                                            class="nav-link">{{producto.titulo}}</a>
                                     </h3>
                                     <div class="d-flex align-items-center">
                                         <span class="h5 d-inline-block mb-0">${{producto.precio}}</span>
@@ -280,11 +274,7 @@
                             </div>
                         </div>
                     </ng-container>
-
-
-
                 </div>
-
                 <!-- Toolbar + Pagination -->
                 <div class="d-flex align-items-center">
                     <div class="form-inline flex-nowrap mr-3 mr-xl-5">
