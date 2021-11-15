@@ -1,11 +1,15 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CarritoService } from 'src/app/services/carrito.service';
 import { GLOBAL } from 'src/app/services/global';
 import { ClienteService } from '../../../services/cliente.service';
 declare let jQuery: any;
 declare let $: any;
 declare let noUiSlider: any;
+declare var iziToast: any;
+import { io } from 'socket.io-client';
+
+
 @Component({
   selector: 'app-index-products',
   templateUrl: './index-products.component.html',
@@ -24,9 +28,18 @@ export class IndexProductsComponent implements OnInit {
   public page = 1;
   public pageSize = 15;
   public sort_by: any = 'Defecto';
+  public carrito_data: any = {
+    variedad: '',
+    cantidad: 1
+  };
+  public token: any;
+  public btn_cart: boolean = false
+  public socket = io('http://localhost:4201');
 
-  constructor(private _clienteService: ClienteService, private _router: ActivatedRoute) {
+
+  constructor(private _clienteService: ClienteService, private _router: ActivatedRoute, private _carritoService: CarritoService) {
     this.url = GLOBAL.url;
+    this.token = localStorage.getItem('token');
     this._router.params.subscribe(
       params => {
         this.route_categoria = params['categoria'];
@@ -233,7 +246,44 @@ export class IndexProductsComponent implements OnInit {
   }
 
 
-
+  agregar_Producto_Carrito(producto: any) {
+    let data = {
+      producto: producto._id,
+      cliente: localStorage.getItem('id'),
+      cantidad: 1,
+      variedad: producto.variedades[0].titulo
+    };
+    this.btn_cart = true;
+    this._carritoService.agregar_carrito_cliente(data, this.token).subscribe(
+      resp => {
+        // console.log(resp);
+        if (resp.data == undefined) {
+          iziToast.show({
+            title: 'Error',
+            titleColor: 'red',
+            color: 'red',
+            class: 'text-danger',
+            position: 'topRight',
+            message: resp.message
+          });
+          this.btn_cart = false;
+        } else {
+          iziToast.show({
+            title: 'Success',
+            titleColor: 'FF0000',
+            class: 'text-danger',
+            color: 'green',
+            position: 'topRight',
+            message: resp.message
+          });
+          // this.socket.emit('new-carrito-add', { data: true });
+          this.socket.emit('add-carrito-add', { data: true });
+          this.btn_cart = false;
+        }
+      }, error => {
+        console.log(error);
+      });
+  }
 
 
 

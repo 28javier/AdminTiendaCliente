@@ -1,0 +1,1352 @@
+[
+    {
+        "id": "010101",
+        "name": "Chone",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010102",
+        "name": "El carmen",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010103",
+        "name": "Flavio Alfaro",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010104",
+        "name": "Jipijapa",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010105",
+        "name": "Junin",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010106",
+        "name": "Manta",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010107",
+        "name": "Montecristi",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010108",
+        "name": "Paján",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010109",
+        "name": "Perdenales",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010110",
+        "name": "Pichincha",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010111",
+        "name": "Portoviejo",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010112",
+        "name": "Rocafuerte",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010113",
+        "name": "Santa Ana",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010114",
+        "name": "Sucre",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010116",
+        "name": "Tosagua",
+        "region_id": "01",
+        "provincia_id": "0101"
+    },
+    {
+        "id": "010117",
+        "name": "Arenillas",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010118",
+        "name": "Balsas",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010119",
+        "name": "Chilla",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010120",
+        "name": "El Guabo",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010121",
+        "name": "Huaquillas",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010122",
+        "name": "Las Lajas",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010123",
+        "name": "Machala",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010124",
+        "name": "Marcabelí",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010125",
+        "name": "Pasaje",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010126",
+        "name": "Piñas",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010127",
+        "name": "Santa Rosa",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010128",
+        "name": "Zaruma",
+        "region_id": "01",
+        "provincia_id": "0102"
+    },
+    {
+        "id": "010129",
+        "name": "Atacames",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010130",
+        "name": "Eloy Alfaro",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010131",
+        "name": "Esmeraldas",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010132",
+        "name": "La Concordi",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010133",
+        "name": "Muisne",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010134",
+        "name": "Quinindé",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010135",
+        "name": "Rio Verde",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010136",
+        "name": "San Lorenzo",
+        "region_id": "01",
+        "provincia_id": "0103"
+    },
+    {
+        "id": "010137",
+        "name": "Guayaquil",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010138",
+        "name": "Alfredo Baquerizo Moreno",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010139",
+        "name": "Balao",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010140",
+        "name": "Balzar",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010141",
+        "name": "Colimes",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010142",
+        "name": "Daule",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010143",
+        "name": "Durán",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010144",
+        "name": "El empalme",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010145",
+        "name": "El triunfo",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010146",
+        "name": "General Antonio Elizalde",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010147",
+        "name": "Isidro Ayora",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010148",
+        "name": "Lomas de Sargentillo",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010149",
+        "name": "Marcelino Maridueña",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010150",
+        "name": "Milagro",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010151",
+        "name": "Naranjal",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010152",
+        "name": "Naranjito",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010153",
+        "name": "Nobol",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010154",
+        "name": "Palestina",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010155",
+        "name": "Pedro Carbo",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010156",
+        "name": "Playas",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010157",
+        "name": "Salitre",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010158",
+        "name": "Samborondón",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010159",
+        "name": "Santa Lucía",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010160",
+        "name": "Simón Bolívar",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010161",
+        "name": "Yaguachi",
+        "region_id": "01",
+        "provincia_id": "0104"
+    },
+    {
+        "id": "010162",
+        "name": "Babahoyo",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010163",
+        "name": "Baba",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010164",
+        "name": "Buena Fe",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010165",
+        "name": "Mocache",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010166",
+        "name": "Montalvo",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010167",
+        "name": "Palenque",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010168",
+        "name": "Pueblo Viejo",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010169",
+        "name": "Quisaloma",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010170",
+        "name": "Urdaneta",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010171",
+        "name": "Valencia",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010172",
+        "name": "Ventanas",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010173",
+        "name": "Vinces",
+        "region_id": "01",
+        "provincia_id": "0105"
+    },
+    {
+        "id": "010174",
+        "name": "Santa Elena",
+        "region_id": "01",
+        "provincia_id": "0106"
+    },
+    {
+        "id": "010175",
+        "name": "La Libertad",
+        "region_id": "01",
+        "provincia_id": "0106"
+    },
+    {
+        "id": "010176",
+        "name": "Salinas",
+        "region_id": "01",
+        "provincia_id": "0106"
+    },
+    {
+        "id": "010177",
+        "name": "Santo Domingo",
+        "region_id": "01",
+        "provincia_id": "0107"
+    },
+    {
+        "id": "010178",
+        "name": "La Concordia",
+        "region_id": "01",
+        "provincia_id": "0107"
+    },
+    {
+        "id": "010179",
+        "name": "Cuenca",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010180",
+        "name": "Camilo Ponce Enríquez",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010181",
+        "name": "Chordeleg",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010182",
+        "name": "El Pan",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010183",
+        "name": "Girón",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010184",
+        "name": "Guachapala",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010185",
+        "name": "Gualaceo",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010186",
+        "name": "Nabón",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010187",
+        "name": "Oña",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010188",
+        "name": "Paute",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010189",
+        "name": "Pucará",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010190",
+        "name": "San Fernando",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010191",
+        "name": "Santa Isabel",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010192",
+        "name": "Sevilla de Oro",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010193",
+        "name": "Sígsig",
+        "region_id": "02",
+        "provincia_id": "0108"
+    },
+    {
+        "id": "010194",
+        "name": "Guaranda",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010195",
+        "name": "Caluma",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010196",
+        "name": "Chillanes",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010197",
+        "name": "Chimbo",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010198",
+        "name": "Echeandía",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010199",
+        "name": "Las Naves",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010200",
+        "name": "San Miguel",
+        "region_id": "02",
+        "provincia_id": "0109"
+    },
+    {
+        "id": "010201",
+        "name": "Azogues",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010202",
+        "name": "Biblián",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010203",
+        "name": "Cañar",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010204",
+        "name": "Déleg",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010205",
+        "name": "El Tambo",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010206",
+        "name": "La Troncal",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010207",
+        "name": "Suscal",
+        "region_id": "02",
+        "provincia_id": "0110"
+    },
+    {
+        "id": "010208",
+        "name": "Tulcán",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010209",
+        "name": "Bolívar",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010210",
+        "name": "Espejo",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010211",
+        "name": "Mira",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010212",
+        "name": "Montúfar",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010213",
+        "name": "San Pedro de Huaca",
+        "region_id": "02",
+        "provincia_id": "0111"
+    },
+    {
+        "id": "010214",
+        "name": "Riobamba",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010215",
+        "name": "Alausí",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010216",
+        "name": "Chambo",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010217",
+        "name": "Chunchi",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010218",
+        "name": "Colta",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010219",
+        "name": "Cumandá",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010220",
+        "name": "Guamote",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010221",
+        "name": "Guano",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010222",
+        "name": "Pallatanga",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010223",
+        "name": "Penipe",
+        "region_id": "02",
+        "provincia_id": "0112"
+    },
+    {
+        "id": "010224",
+        "name": "Latacunga",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010225",
+        "name": "La Maná",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010226",
+        "name": "Pangua",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010227",
+        "name": "Pujilí",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010228",
+        "name": "Salcedo",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010229",
+        "name": "Saquisilí",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010230",
+        "name": "Sigchos",
+        "region_id": "02",
+        "provincia_id": "0113"
+    },
+    {
+        "id": "010231",
+        "name": "Ibarra",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010232",
+        "name": "Antonio Ante",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010233",
+        "name": "Cotacachi",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010234",
+        "name": "Otavalo",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010235",
+        "name": "Pimampiro",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010236",
+        "name": "San Miguel de Urcuquí",
+        "region_id": "02",
+        "provincia_id": "0114"
+    },
+    {
+        "id": "010237",
+        "name": "Loja",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010238",
+        "name": "Calvas",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010239",
+        "name": "Catamayo",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010240",
+        "name": "Celica",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010241",
+        "name": "Chaguarpamba",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010242",
+        "name": "Espíndola",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010243",
+        "name": "Gonzanamá",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010244",
+        "name": "Macará",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010245",
+        "name": "Olmedo",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010246",
+        "name": "Paltas",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010247",
+        "name": "Pindal",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010248",
+        "name": "Puyango",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010249",
+        "name": "Quilanga",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010250",
+        "name": "Saraguro",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010251",
+        "name": "Sozoranga",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010252",
+        "name": "Zapotillo",
+        "region_id": "02",
+        "provincia_id": "0115"
+    },
+    {
+        "id": "010253",
+        "name": "Quito",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010254",
+        "name": "Cayambe",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010255",
+        "name": "Mejía",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010256",
+        "name": "Pedro Moncayo",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010257",
+        "name": "Puerto Quito",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010258",
+        "name": "Rumiñahui",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010259",
+        "name": "San Miguel de los Bancos",
+        "region_id": "02",
+        "provincia_id": "0116"
+    },
+    {
+        "id": "010260",
+        "name": "Ambato",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010261",
+        "name": "Baños",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010262",
+        "name": "Cevallos",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010263",
+        "name": "Mocha",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010264",
+        "name": "Patate",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010265",
+        "name": "Pelileo",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010266",
+        "name": "Quero",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010267",
+        "name": "Santiago de Píllaro",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010268",
+        "name": "Tisaleo",
+        "region_id": "02",
+        "provincia_id": "0117"
+    },
+    {
+        "id": "010269",
+        "name": "Tena",
+        "region_id": "03",
+        "provincia_id": "0118"
+    },
+    {
+        "id": "010270",
+        "name": "Archidona",
+        "region_id": "03",
+        "provincia_id": "0118"
+    },
+    {
+        "id": "010271",
+        "name": "Carlos Julio Arosemena Tola",
+        "region_id": "03",
+        "provincia_id": "0118"
+    },
+    {
+        "id": "010272",
+        "name": "El Chaco",
+        "region_id": "03",
+        "provincia_id": "0118"
+    },
+    {
+        "id": "010273",
+        "name": "Quijos",
+        "region_id": "03",
+        "provincia_id": "0118"
+    },
+    {
+        "id": "010274",
+        "name": "Pastaza",
+        "region_id": "03",
+        "provincia_id": "0119"
+    },
+    {
+        "id": "010275",
+        "name": "Arajuno",
+        "region_id": "03",
+        "provincia_id": "0119"
+    },
+    {
+        "id": "010276",
+        "name": "Mera",
+        "region_id": "03",
+        "provincia_id": "0119"
+    },
+    {
+        "id": "010277",
+        "name": "Santa Clara",
+        "region_id": "03",
+        "provincia_id": "0119"
+    },
+    {
+        "id": "010278",
+        "name": "Morona",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010279",
+        "name": "Gualaquiza",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010280",
+        "name": "Huamboya",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010281",
+        "name": "Limón Indanza",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010282",
+        "name": "Logroño",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010283",
+        "name": "Pablo Sexto",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010284",
+        "name": "Palora",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010285",
+        "name": "San Juan Bosco",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010286",
+        "name": "Santiago de Méndez",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010287",
+        "name": "Sucúa",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010288",
+        "name": "Taisha",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010289",
+        "name": "Tiwintza",
+        "region_id": "03",
+        "provincia_id": "0120"
+    },
+    {
+        "id": "010290",
+        "name": "Zamora",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010291",
+        "name": "Centinela del Cóndor",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010292",
+        "name": "Chinchipe",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010293",
+        "name": "El Pangui",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010294",
+        "name": "Nangaritza",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010295",
+        "name": "Palanda",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010296",
+        "name": "Paquisha",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010297",
+        "name": "Yacuambi",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010298",
+        "name": "Yantzaza",
+        "region_id": "03",
+        "provincia_id": "0121"
+    },
+    {
+        "id": "010299",
+        "name": "Francisco de Orellana",
+        "region_id": "03",
+        "provincia_id": "0122"
+    },
+    {
+        "id": "010300",
+        "name": "Aguarico",
+        "region_id": "03",
+        "provincia_id": "0122"
+    },
+    {
+        "id": "010301",
+        "name": " La Joya de los Sachas",
+        "region_id": "03",
+        "provincia_id": "0122"
+    },
+    {
+        "id": "010302",
+        "name": "Loreto",
+        "region_id": "03",
+        "provincia_id": "0122"
+    },
+    {
+        "id": "010303",
+        "name": "Lago Agrio",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010304",
+        "name": "Cascales",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010305",
+        "name": "Cuyabeno",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010306",
+        "name": "Gonzalo Pizarro",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010307",
+        "name": "Putumayo",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010308",
+        "name": "Shushufindi",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010309",
+        "name": "Sucumbíos",
+        "region_id": "03",
+        "provincia_id": "0123"
+    },
+    {
+        "id": "010310",
+        "name": "Española",
+        "region_id": "04",
+        "provincia_id": "0124"
+    },
+    {
+        "id": "010311",
+        "name": "Santa Fe",
+        "region_id": "04",
+        "provincia_id": "0124"
+    },
+    {
+        "id": "010312",
+        "name": "Genovesa",
+        "region_id": "04",
+        "provincia_id": "0124"
+    },
+    {
+        "id": "010313",
+        "name": "Floreana",
+        "region_id": "04",
+        "provincia_id": "0124"
+    },
+    {
+        "id": "010314",
+        "name": "San Cristóbal",
+        "region_id": "04",
+        "provincia_id": "0124"
+    },
+    {
+        "id": "010315",
+        "name": "Tomás de Berlanga",
+        "region_id": "04",
+        "provincia_id": "0125"
+    },
+    {
+        "id": "010316",
+        "name": "Isla Charles Darwin",
+        "region_id": "04",
+        "provincia_id": "0125"
+    },
+    {
+        "id": "010317",
+        "name": "Fernandina",
+        "region_id": "04",
+        "provincia_id": "0125"
+    },
+    {
+        "id": "010318",
+        "name": "Teodoro Wolf",
+        "region_id": "04",
+        "provincia_id": "0125"
+    },
+    {
+        "id": "010319",
+        "name": "Bellavista",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010320",
+        "name": "Isla Baltra",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010321",
+        "name": "Marchena",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010322",
+        "name": "Pinta",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010323",
+        "name": "Pinzón",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010324",
+        "name": "Rábida",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010325",
+        "name": "Santiago",
+        "region_id": "04",
+        "provincia_id": "0126"
+    },
+    {
+        "id": "010326",
+        "name": "Seymour",
+        "region_id": "04",
+        "provincia_id": "0126"
+    }
+]

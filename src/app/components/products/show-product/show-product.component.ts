@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CarritoService } from 'src/app/services/carrito.service';
 import { GLOBAL } from 'src/app/services/global';
 import { GuestService } from 'src/app/services/guest.service';
 declare let tns: any;
 declare var lightGallery: any;
 declare var iziToast: any;
+import { io } from 'socket.io-client';
+
+
 @Component({
   selector: 'app-show-product',
   templateUrl: './show-product.component.html',
@@ -16,9 +20,18 @@ export class ShowProductComponent implements OnInit {
   public url: any;
   public producto: any = {}
   public productos_rec: Array<any> = [];
+  public carrito_data: any = {
+    variedad: '',
+    cantidad: 1
+  };
+  public token: any;
+  public btn_cart: boolean = false
+  public socket = io('http://localhost:4201');
 
-  constructor(private _guestService: GuestService, private _rote: ActivatedRoute) {
+
+  constructor(private _guestService: GuestService, private _rote: ActivatedRoute, private _carritoService: CarritoService) {
     this.url = GLOBAL.url;
+    this.token = localStorage.getItem('token');
     this._rote.params.subscribe(
       params => {
         this.slug = params['slug'];
@@ -92,12 +105,71 @@ export class ShowProductComponent implements OnInit {
   cargarProductosRecomendados() {
     this._guestService.listar_productos_recomendados_publico(this.producto.categoria).subscribe(
       resp => {
-        console.log(resp);
+        // console.log(resp);
         this.productos_rec = resp.data;
       }, error => {
         console.log(error);
       });
   }
 
+  agregar_Producto_Carrito() {
+    if (this.carrito_data.variedad) {
+      if (this.carrito_data.cantidad <= this.producto.stock) {
+        let data = {
+          producto: this.producto._id,
+          cliente: localStorage.getItem('id'),
+          cantidad: this.carrito_data.cantidad,
+          variedad: this.carrito_data.variedad
+        };
+        this.btn_cart = true;
+        this._carritoService.agregar_carrito_cliente(data, this.token).subscribe(
+          resp => {
+            console.log(resp);
+            if (resp.data == undefined) {
+              iziToast.show({
+                title: 'Error',
+                titleColor: 'red',
+                color: 'red',
+                class: 'text-danger',
+                position: 'topRight',
+                message: resp.message
+              });
+              this.btn_cart = false;
+            } else {
+              iziToast.show({
+                title: 'Success',
+                titleColor: 'FF0000',
+                class: 'text-danger',
+                color: 'green',
+                position: 'topRight',
+                message: resp.message
+              });
+              this.socket.emit('add-carrito-add', { data: true });
+              this.btn_cart = false;
+            }
+          }, error => {
+            console.log(error);
+          });
+      } else {
+        iziToast.show({
+          title: 'Error',
+          titleColor: 'red',
+          color: 'red',
+          class: 'text-danger',
+          position: 'topRight',
+          message: `La maxima cantidad disponible es ${this.producto.stock}`
+        });
+      }
+    } else {
+      iziToast.show({
+        title: 'Error',
+        titleColor: 'red',
+        color: 'red',
+        class: 'text-danger',
+        position: 'topRight',
+        message: 'Seleccione una variedad del Producto'
+      });
+    }
+  }
 
 }

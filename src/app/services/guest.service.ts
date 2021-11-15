@@ -25,4 +25,19 @@ export class GuestService {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this._http.get(this.url + 'listar_productos_recomendados_publico/' + categoria, { headers: headers });
   }
+
+
+  // data json de regiones provincias y distritos
+  get_Regiones(): Observable<any> {
+    return this._http.get('./assets/regiones.json');
+  }
+
+  get_Provincias(): Observable<any> {
+    return this._http.get('./assets/provincias.json');
+  }
+
+  get_Distrito(): Observable<any> {
+    return this._http.get('./assets/distritos.json');
+  }
+
 }

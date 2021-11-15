@@ -15,6 +15,8 @@ import { PerfilComponent } from './components/usuario/perfil/perfil.component';
 import { SidebarComponent } from './components/usuario/sidebar/sidebar.component';
 import { IndexProductsComponent } from './components/products/index-products/index-products.component';
 import { ShowProductComponent } from './components/products/show-product/show-product.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { DireccionesComponent } from './components/usuario/direcciones/direcciones.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ShowProductComponent } from './components/products/show-product/show-pr
     SidebarComponent,
     IndexProductsComponent,
     ShowProductComponent,
+    CarritoComponent,
+    DireccionesComponent,
 
   ],
   imports: [
