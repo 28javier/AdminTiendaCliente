@@ -104,4 +104,11 @@ export class ClienteService {
     let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
     return this._http.delete(this.url + 'eliminar_direccion_cliente/' + id, { headers: headers });
   }
+
+  // servicios de compras de productos de los clientes
+  // registro_compra_cliente
+  registro_compra_cliente(data: any, token: any): Observable<any> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+    return this._http.post(this.url + 'registro_compra_cliente', data, { headers: headers });
+  }
 }
