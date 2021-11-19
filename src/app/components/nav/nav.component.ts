@@ -6,6 +6,7 @@ import { GLOBAL } from 'src/app/services/global';
 declare let iziToast: any;
 declare let $: any;
 import { io } from 'socket.io-client';
+import { GuestService } from '../../services/guest.service';
 
 @Component({
   selector: 'app-nav',
@@ -24,10 +25,10 @@ export class NavComponent implements OnInit {
   public url: any;
   public subtotal = 0;
   public socket = io('http://localhost:4201');
+  public descuento_activo: any = undefined;
 
 
-
-  constructor(private _clienteService: ClienteService, private _router: Router, private _carritoService: CarritoService) {
+  constructor(private _clienteService: ClienteService, private _router: Router, private _carritoService: CarritoService, private _guestService: GuestService) {
     this.token = localStorage.getItem('token'); //Token del usuario que inicio seccion
     this.id = localStorage.getItem('id'); //Identificador del usuario que inicio seccion
     this.url = GLOBAL.url;
@@ -66,6 +67,8 @@ export class NavComponent implements OnInit {
       // console.log(data);
       this.obtener_carrito_cliente();
     });
+
+    this.obtenerDescuentoActivo();
   }
 
   obtener_carrito_cliente() {
@@ -118,9 +121,16 @@ export class NavComponent implements OnInit {
 
   calcularCarrito() {
     this.subtotal = 0;
-    this.carrito_arr.forEach(item => {
-      this.subtotal = this.subtotal + parseInt(item.producto.precio);
-    });
+    if (this.descuento_activo == undefined) {
+      this.carrito_arr.forEach(item => {
+        this.subtotal = this.subtotal + parseInt(item.producto.precio);
+      });
+    } else if (this.descuento_activo != undefined) {
+      this.carrito_arr.forEach(item => {
+        let new_precio = Math.round(parseInt(item.producto.precio) - (parseInt(item.producto.precio) * this.descuento_activo.descuento) / 100);
+        this.subtotal = this.subtotal + new_precio;
+      });
+    }
   }
 
   eliminar_item(id: any) {
@@ -136,6 +146,22 @@ export class NavComponent implements OnInit {
           message: 'Se elimino el producto del carrito'
         });
         this.socket.emit('delete-carrito', { data: resp.data });
+      }, error => {
+        console.log(error);
+      });
+  }
+
+  // descuentos mostrar
+  obtenerDescuentoActivo() {
+    this._guestService.obtener_descuento_activo().subscribe(
+      resp => {
+        // console.log(resp);
+        if (resp.data != undefined) {
+          this.descuento_activo = resp.data[0];
+          // console.log(this.descuento_activo);
+        } else {
+          this.descuento_activo = undefined;
+        }
       }, error => {
         console.log(error);
       });

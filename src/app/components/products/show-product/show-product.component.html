@@ -58,12 +58,16 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
 
                     <!-- Price -->
-                    <div class="d-flex align-items-center mb-sm-0 mb-4">
-                        <span class="h3 d-inline-block mb-0 text-danger">{{producto.precio | currency}}</span>
-                        <del class="d-inline-block ml-2 pl-1 font-size-lg text-muted">$31.00</del>
-                        <span class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">- 50%</span>
+                    <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo == undefined">
+                        <span class="h3 d-inline-block mb-0">${{producto.precio}}</span>
                     </div>
-
+                    <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo != undefined">
+                        <span class="h3 d-inline-block mb-0 text-danger" *ngIf="descuento_activo">${{producto.precio |
+                            descuentos: descuento_activo.descuento}}</span>
+                        <del class="d-inline-block ml-2 pl-1 font-size-lg text-muted">${{producto.precio}}</del>
+                        <span *ngIf="descuento_activo"
+                            class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">-{{descuento_activo.descuento}}%</span>
+                    </div>
                     <!-- Rating -->
                     <div class="text-sm-right">
                         <div class="star-rating ml-auto">
@@ -306,9 +310,17 @@
                             <h3 class="card-product-title text-truncate mb-2">
                                 <a href="#" class="nav-link">{{producto.titulo}}</a>
                             </h3>
-                            <div class="d-flex align-items-center mb-3">
-                                <span class="h5 d-inline-block text-danger mb-0">{{producto.precio | currency}}</span>
-                                <del class="d-inline-block ml-2 pl-1 text-muted">$31.00</del>
+                            <!-- Price -->
+                            <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo == undefined">
+                                <span class="h3 d-inline-block mb-0">${{producto.precio}}</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo != undefined">
+                                <span class="h3 d-inline-block mb-0 text-danger"
+                                    *ngIf="descuento_activo">${{producto.precio |
+                                    descuentos: descuento_activo.descuento}}</span>
+                                <del class="d-inline-block ml-2 pl-1 font-size-lg text-muted">${{producto.precio}}</del>
+                                <span *ngIf="descuento_activo"
+                                    class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">-{{descuento_activo.descuento}}%</span>
                             </div>
 
                             <button type="button" class="btn btn-primary btn-block" style="margin-bottom: 2rem;">
@@ -323,6 +335,16 @@
     </div>
 
     <section class="container py-md-6 py-5 mb-2">
+
+        <!-- decuentos  -->
+        <div class="row mb-5" *ngIf="descuento_activo != undefined">
+            <div class="col-12">
+                <img [src]="url + 'obtener_banner_descuento/'+ descuento_activo.banner" style="width: 100% !important;"
+                    alt="">
+            </div>
+        </div>
+        <!-- fin decuentos  -->
+
         <div class="row">
             <div class="col-lg-7 col-md-8 mb-md-0 mb-5">
                 <div class="row mb-sm-5 mb-4 pb-2 pb-md-4">
@@ -625,9 +647,17 @@
                         <h3 class="card-product-title text-truncate mb-2">
                             <a href="#" class="nav-link">{{producto.titulo}}</a>
                         </h3>
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="h5 d-inline-block text-danger mb-0">{{producto.precio | currency}}</span>
-                            <del class="d-inline-block ml-2 pl-1 text-muted">$31.00</del>
+                        <!-- Price -->
+                        <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo == undefined">
+                            <span class="h3 d-inline-block mb-0">${{producto.precio}}</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-sm-0 mb-4" *ngIf="descuento_activo != undefined">
+                            <span class="h3 d-inline-block mb-0 text-danger" *ngIf="descuento_activo">${{producto.precio
+                                |
+                                descuentos: descuento_activo.descuento}}</span>
+                            <del class="d-inline-block ml-2 pl-1 font-size-lg text-muted">${{producto.precio}}</del>
+                            <span *ngIf="descuento_activo"
+                                class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">-{{descuento_activo.descuento}}%</span>
                         </div>
 
                         <button type="button" class="btn btn-primary btn-block" style="margin-bottom: 2rem;">

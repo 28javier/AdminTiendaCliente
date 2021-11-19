@@ -16,6 +16,15 @@
 
     <!-- Page container -->
     <section class="container pt-3 pb-5 pb-md-6 mb-2 mb-lg-0">
+
+        <!-- decuentos  -->
+        <div class="row mb-5" *ngIf="descuento_activo != undefined">
+            <div class="col-12">
+                <img [src]="url + 'obtener_banner_descuento/'+ descuento_activo.banner" style="width: 100% !important;"
+                    alt="">
+            </div>
+        </div>
+        <!-- fin decuentos  -->
         <!-- Toolbar + Pagination -->
         <div class="row mb-4 pb-2">
             <div class="col-md-3 pr-lg-4 mb-3 mb-md-0">
@@ -232,6 +241,8 @@
                                         <img [src]="url +'obtener_portada/'+ producto.portada" alt="Product image">
                                     </a>
                                     <div class="card-product-widgets-top">
+                                        <span *ngIf="descuento_activo"
+                                            class="badge product-badge badge-danger">-{{descuento_activo.descuento}}%</span>
                                         <div class="star-rating ml-auto">
                                             <i class="sr-star cxi-star-filled active"></i>
                                             <i class="sr-star cxi-star-filled active"></i>
@@ -250,8 +261,14 @@
                                         <a [routerLink]="['/productos/', producto.slug]"
                                             class="nav-link">{{producto.titulo}}</a>
                                     </h3>
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center" *ngIf="descuento_activo == undefined">
                                         <span class="h5 d-inline-block mb-0">${{producto.precio}}</span>
+                                    </div>
+                                    <div class="d-flex align-items-center" *ngIf="descuento_activo != undefined">
+                                        <span class="h5 d-inline-block text-danger mb-0">${{producto.precio |
+                                            descuentos:
+                                            descuento_activo.descuento}}</span>
+                                        <del class="h5 d-inline-block ml-2 pl-1 text-muted">${{producto.precio}}</del>
                                     </div>
                                 </div>
                                 <div class="card-footer">

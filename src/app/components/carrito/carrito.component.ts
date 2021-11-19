@@ -5,6 +5,7 @@ declare let iziToast: any;
 import { io } from 'socket.io-client';
 import { ClienteService } from '../../services/cliente.service';
 import { GuestService } from '../../services/guest.service';
+import { ActivatedRoute, Router } from '@angular/router';
 declare var Cleave: any;
 declare var StickySidebar: any;
 declare var paypal: any;
@@ -35,18 +36,25 @@ export class CarritoComponent implements OnInit {
   public venta: any = {};
   public dventa: Array<any> = [];
 
+  public error_cupon = '';
+  public descuento = 0;
+  public carrito_load = true;
+  public descuento_activo: any = undefined;
+
   constructor(private _carritoService: CarritoService, private _clienteService: ClienteService,
-    private _guestService: GuestService) {
+    private _guestService: GuestService, private router: Router) {
     this.token = localStorage.getItem('token');
     this.id_cliente = localStorage.getItem('id');
     this.venta.cliente = this.id_cliente;
     this.url = GLOBAL.url;
+
 
     this._guestService.get_Envios().subscribe(
       resp => {
         // console.log(resp);
         this.envios = resp;
       });
+    this.obtenerDescuentoActivo();
 
   }
 
@@ -76,10 +84,10 @@ export class CarritoComponent implements OnInit {
       createOrder: (data: any, actions: any) => {
         return actions.order.create({
           purchase_units: [{
-            description: 'Nombre del pago Prueba',
+            description: 'Pago de la tienda XXX',
             amount: {
               currency_code: 'USD',
-              value: 850
+              value: this.total_pagar
             },
           }]
         });
@@ -96,6 +104,12 @@ export class CarritoComponent implements OnInit {
         this._clienteService.registro_compra_cliente(this.venta, this.token).subscribe(
           resp => {
             console.log(resp);
+            // envio del email
+            this._clienteService.enviar_correo_compra_cliente(resp.venta._id, this.token).subscribe(
+              resp => {
+                console.log(resp);
+                this.router.navigate(['/']);
+              });
           }, error => {
             console.log(error);
           });
@@ -106,6 +120,7 @@ export class CarritoComponent implements OnInit {
       }
     }).render(this.paypalElement.nativeElement);
     // fin del codigo de Paypal
+
   }
 
   obtenerCarritoCliente() {
@@ -121,9 +136,10 @@ export class CarritoComponent implements OnInit {
             variedad: element.variedad,
             cantidad: element.cantidad,
             cliente: localStorage.getItem('id')
-          })
-        })
+          });
+        });
         // detalle venta
+        this.carrito_load = false;
         this.calcularCarrito();
         this.calcular_pagar('Envio Gratis');
       }, error => {
@@ -132,10 +148,16 @@ export class CarritoComponent implements OnInit {
   }
   calcularCarrito() {
     this.subtotal = 0;
-    this.carrito_arr.forEach(item => {
-      this.subtotal = this.subtotal + parseInt(item.producto.precio);
-    });
-    this.total_pagar = this.subtotal;
+    if (this.descuento_activo == undefined) {
+      this.carrito_arr.forEach(item => {
+        this.subtotal = this.subtotal + parseInt(item.producto.precio);
+      });
+    } else if (this.descuento_activo != undefined) {
+      this.carrito_arr.forEach(item => {
+        let new_precio = Math.round(parseInt(item.producto.precio) - (parseInt(item.producto.precio) * this.descuento_activo.descuento) / 100);
+        this.subtotal = this.subtotal + new_precio;
+      });
+    }
   }
 
   get_direccion_principal() {
@@ -178,5 +200,54 @@ export class CarritoComponent implements OnInit {
     this.venta.envio_precio = parseInt(this.precio_envio);
     this.venta.envio_titulo = envio_titulo;
     // console.log(this.venta);
+  }
+
+
+  validar_cupon() {
+    if (this.venta.cupon) {
+      if (this.venta.cupon.toString().length <= 20) {
+        //si es valido
+        this.error_cupon = '';
+        this._clienteService.validar_cupon_cliente(this.venta.cupon, this.token).subscribe(
+          resp => {
+            // console.log(resp);
+            if (resp.data != undefined) {
+              // descuento
+              this.error_cupon = '';
+              if (resp.data.tipo == 'Valor_fijo') {
+                this.descuento = resp.data.valor;
+                this.total_pagar = this.total_pagar - this.descuento;
+              } else if (resp.data.tipo == 'Porcentaje') {
+                this.descuento = (this.total_pagar * resp.data.valor) / 100;
+                this.total_pagar = this.total_pagar - this.descuento;
+              }
+            } else {
+              this.error_cupon = 'El cupón no se pudo canjear';
+
+            }
+          });
+      } else {
+        // no es valido
+        this.error_cupon = 'El cupón de debe ser menor de 20 caracteres';
+      }
+    } else {
+      this.error_cupon = 'El cupón no es valido.';
+    }
+  }
+
+  // descuentos mostrar
+  obtenerDescuentoActivo() {
+    this._guestService.obtener_descuento_activo().subscribe(
+      resp => {
+        // console.log(resp);
+        if (resp.data != undefined) {
+          this.descuento_activo = resp.data[0];
+          // console.log(this.descuento_activo);
+        } else {
+          this.descuento_activo = undefined;
+        }
+      }, error => {
+        console.log(error);
+      });
   }
 }

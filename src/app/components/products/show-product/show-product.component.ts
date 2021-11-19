@@ -27,6 +27,7 @@ export class ShowProductComponent implements OnInit {
   public token: any;
   public btn_cart: boolean = false
   public socket = io('http://localhost:4201');
+  public descuento_activo: any = undefined;
 
 
   constructor(private _guestService: GuestService, private _rote: ActivatedRoute, private _carritoService: CarritoService) {
@@ -100,6 +101,8 @@ export class ShowProductComponent implements OnInit {
       });
 
     }, 500);
+
+    this.obtenerDescuentoActivo();
   }
 
   cargarProductosRecomendados() {
@@ -172,4 +175,20 @@ export class ShowProductComponent implements OnInit {
     }
   }
 
+
+  // descuentos mostrar
+  obtenerDescuentoActivo() {
+    this._guestService.obtener_descuento_activo().subscribe(
+      resp => {
+        // console.log(resp);
+        if (resp.data != undefined) {
+          this.descuento_activo = resp.data[0];
+          console.log(this.descuento_activo);
+        } else {
+          this.descuento_activo = undefined;
+        }
+      }, error => {
+        console.log(error);
+      });
+  }
 }

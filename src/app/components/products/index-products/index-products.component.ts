@@ -8,6 +8,7 @@ declare let $: any;
 declare let noUiSlider: any;
 declare var iziToast: any;
 import { io } from 'socket.io-client';
+import { GuestService } from 'src/app/services/guest.service';
 
 
 @Component({
@@ -35,9 +36,11 @@ export class IndexProductsComponent implements OnInit {
   public token: any;
   public btn_cart: boolean = false
   public socket = io('http://localhost:4201');
+  public descuento_activo: any = undefined;
 
 
-  constructor(private _clienteService: ClienteService, private _router: ActivatedRoute, private _carritoService: CarritoService) {
+
+  constructor(private _clienteService: ClienteService, private _router: ActivatedRoute, private _carritoService: CarritoService, private _guestService: GuestService) {
     this.url = GLOBAL.url;
     this.token = localStorage.getItem('token');
     this._router.params.subscribe(
@@ -83,14 +86,15 @@ export class IndexProductsComponent implements OnInit {
         values: 5,
 
       }
-    })
-
+    });
     slider.noUiSlider.on('update', function (values: any) {
       // console.log(values);
       $('.cs-range-slider-value-min').val(values[0]);
       $('.cs-range-slider-value-max').val(values[1]);
     });
     $('.noUi-tooltip').css('font-size', '11px');
+
+    this.obtenerDescuentoActivo();
   }
 
   configPublico() {
@@ -285,6 +289,20 @@ export class IndexProductsComponent implements OnInit {
       });
   }
 
-
+  // descuentos mostrar
+  obtenerDescuentoActivo() {
+    this._guestService.obtener_descuento_activo().subscribe(
+      resp => {
+        // console.log(resp);
+        if (resp.data != undefined) {
+          this.descuento_activo = resp.data[0];
+          // console.log(this.descuento_activo);
+        } else {
+          this.descuento_activo = undefined;
+        }
+      }, error => {
+        console.log(error);
+      });
+  }
 
 }

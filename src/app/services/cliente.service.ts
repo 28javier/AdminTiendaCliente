@@ -111,4 +111,19 @@ export class ClienteService {
     let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
     return this._http.post(this.url + 'registro_compra_cliente', data, { headers: headers });
   }
+
+
+  // servicio del cupon
+  // validar_cupon_cliente
+  validar_cupon_cliente(cupon: any, token: any): Observable<any> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+    return this._http.get(this.url + 'validar_cupon_cliente/' + cupon, { headers: headers });
+  }
+
+  // servicio del envio del email
+  // enviar_correo_compra_cliente
+  enviar_correo_compra_cliente(id: any, token: any): Observable<any> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+    return this._http.get(this.url + 'enviar_correo_compra_cliente/' + id, { headers: headers });
+  }
 }
